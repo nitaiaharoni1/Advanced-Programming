@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML page</title>
+<script>
+	finished = 0;
+
+	function handleClick1(val) {
+		  value1 = val.value;
+		}
+	
+	function handleClick2(val) {
+		  value2 = val.value;
+		}
+	
+	function jsCheck(){
+		if(finished == 1){
+			return;
+		}else{
+			q1 = document.getElementById(value1).nextSibling.innerText;
+			q2 = document.getElementById(value2).nextSibling.innerText;
+			if(value1 == 'red'){
+				document.getElementById(value1).nextSibling.innerHTML = q1.bold() + " Correct"
+			}else{
+				document.getElementById(value1).nextSibling.innerHTML = q1.bold() + " Inorrect"
+			}
+			if(value2 == '2'){
+				document.getElementById(value2).nextSibling.innerHTML = q2.bold() + " Correct"
+			}else{
+				document.getElementById(value2).nextSibling.innerHTML = q2.bold() + " Inorrect"
+			}
+			finished = 1;
+		}
+	}
+	</script>
+
+</head>
+<body>
+	<h2>Questions:</h2>
+
+	<p>1. What is your favorite color?</p>
+	<form action="http://localhost:4567/check-answers" method="get">
+		<ul>
+			<li><input type="radio" id="red" name="q1" value="red"
+				onclick="handleClick1(this)"><label for="red">Red</label><br></li>
+			<li><label> <input type="radio" id="blue" name="q1"
+					value="blue" onclick="handleClick1(this)"><label for="blue">Blue</label><br></li>
+			<li><input type="radio" id="green" name="q1" value="green"
+				onclick="handleClick1(this)"><label for="green">Green</label><br></li>
+			<li><input type="radio" id="other" name="q1" value="other"
+				onclick="handleClick1(this)"><label for="other">Other</label><br></li>
+		</ul>
+
+		<p>2. If you choose an answer to this question at random, what is
+			the probability that you answer correctly?</p>
+		<ul>
+			<li><input type="radio" id="1" name="q2" value="1"
+				onclick="handleClick2(this)"><label>50%</label><br></li>
+			<li><input type="radio" id="2" name="q2" value="2"
+				onclick="handleClick2(this)"><label>25%</label><br></li>
+			<li><input type="radio" id="3" name="q2" value="3"
+				onclick="handleClick2(this)"><label>0%</label><br></li>
+			<li><input type="radio" id="4" name="q2" value="4"
+				onclick="handleClick2(this)"><label>75%</label><br></li>
+		</ul>
+		<input type="submit" name="" value="Check My Answers"> 
+		<input type="checkbox" id="js" name="checkbox"
+			onchange="jsCheck()"><label> Use JavaScript Checking</label>
+	</form>
+</body>
+</html>

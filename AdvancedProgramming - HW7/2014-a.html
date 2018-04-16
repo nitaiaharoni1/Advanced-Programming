@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Serving Survey</h1>
+	<h2>How will you eat?</h2>
+	<form method='get' action='http://x.com/submit/123'>
+		<ul>
+			<li>Select your cutlery: </br>
+				<input type='radio' name='cutlery' id='fork' value='fork'> Fork </br>
+				<input type='radio' name='cutlery' id='knife' value='knife'> Knife </br>
+				<input type='radio' name='cutlery' id='spoon' value='spoon' checked> Spoon </br>
+			</li>
+			<li>
+			<input type='hidden' name='food' value='for thought'>
+			Special Requests: <input type='text' name='special' value='none'>
+			</li>
+		</ul>
+		<input type='submit' value='Answer'>
+	</form>
+</body>
+</html>

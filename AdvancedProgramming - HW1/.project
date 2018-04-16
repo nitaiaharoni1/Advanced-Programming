@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>AdvancedProgramming - HW1</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/ConsoleGameTest.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/repos/main/nitai.aharoni-hw1/ConsoleGameTest.java</locationURI>
+		</link>
+		<link>
+			<name>src/ConsoleRunner.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/repos/main/nitai.aharoni-hw1/ConsoleRunner.java</locationURI>
+		</link>
+		<link>
+			<name>src/Game.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/repos/main/nitai.aharoni-hw1/Game.java</locationURI>
+		</link>
+		<link>
+			<name>src/NumberGuessingGame.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/repos/main/nitai.aharoni-hw1/NumberGuessingGame.java</locationURI>
+		</link>
+		<link>
+			<name>src/Player.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/repos/main/nitai.aharoni-hw1/Player.java</locationURI>
+		</link>
+		<link>
+			<name>src/StatusUpdate.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/repos/main/nitai.aharoni-hw1/StatusUpdate.java</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

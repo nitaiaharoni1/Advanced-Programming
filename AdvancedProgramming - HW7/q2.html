@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tic Tac Toe</title>
+<script>
+	turn = "X";
+	winner = 0;
+
+	function content(element) {
+		if (winner == 0) {
+			if (element.textContent == "X" || element.textContent == "O") {
+				alert("Cell is full")
+			} else {
+				element.textContent = turn;
+				if (turn == "X") {
+					turn = "O";
+				} else {
+					turn = "X";
+				}
+				var table = document.getElementById("ticTacTable");
+				for (var i = 0; i < 3; i++) {
+					if (table.rows[i].cells[0].textContent == table.rows[i].cells[1].textContent && table.rows[i].cells[0].textContent == table.rows[i].cells[2].textContent) {
+						winner = table.rows[i].cells[0].textContent;
+					}
+					if (table.rows[0].cells[i].textContent == table.rows[1].cells[i].textContent && table.rows[0].cells[i].textContent == table.rows[2].cells[i].textContent) {
+						winner = table.rows[0].cells[i].textContent;
+					}
+				}
+				if (table.rows[0].cells[0].textContent == table.rows[1].cells[1].textContent && table.rows[0].cells[0].textContent == table.rows[2].cells[2].textContent) {
+					winner = table.rows[0].cells[0].textContent;
+				}
+				if (table.rows[1].cells[2].textContent == table.rows[1].cells[1].textContent && table.rows[1].cells[2].textContent == table.rows[2].cells[1].textContent) {
+					winner = table.rows[1].cells[2].textContent;
+				}
+				if(winner !=0){
+					document.getElementById("paragraph").innerText = winner + " has won!";
+				}
+				document.getElementById("paragraph").innerText = "It’s now " + turn + "’s turn";
+			}
+		} else {
+			document.getElementById("paragraph").innerText = winner + " has won!";
+		}
+	}
+
+</script>
+</head>
+<body>
+	<h1>Play Tic Tac Toe</h1>
+	<p id="paragraph">It’s now X’s turn</p>
+	<table id="ticTacTable" width="100" class="fixed" border="1">
+		<tr>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+		</tr>
+		<tr>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+		</tr>
+		<tr>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+			<td width="30" align="center" onclick="content(this)">&nbsp</td>
+		</tr>
+	</table>
+</body>
+</html>
